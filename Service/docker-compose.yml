@@ -47,6 +47,7 @@ services:
       - type: bind
         source: 'C:\users\srmenon\Documents'
         target: '/home/jovyan/work'
+    command: bash -c "sleep 40 && jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --clear-output /home/jovyan/work/Jarvis/Jarvis/DevEnv_Prod.ipynb"
   spark:
     image: jupyter/pyspark-notebook
     networks: 
@@ -59,6 +60,7 @@ services:
       - type: bind
         source: 'C:\users\srmenon\Documents'
         target: '/home/jovyan/work'
+    command: bash -c "sleep 40 && jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --clear-output /home/jovyan/work/Jarvis/Jarvis/Spark_Prod.ipynb"
   serving:
     image: tensorflow/serving
     networks: 
@@ -98,4 +100,4 @@ services:
     networks: 
       - kafka-net
     deploy:
-      replicas: 1
+      replicas: 0

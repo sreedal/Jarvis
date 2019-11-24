@@ -1,0 +1,181 @@
+[I 20:08:22.953 NotebookApp] Writing notebook server cookie secret to /home/jovyan/.local/share/jupyter/runtime/notebook_cookie_secret
+[I 20:08:24.569 NotebookApp] JupyterLab extension loaded from /opt/conda/lib/python3.7/site-packages/jupyterlab
+[I 20:08:24.570 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+[C 20:08:25.522 NotebookApp] Running as root is not recommended. Use --allow-root to bypass.
+[I 20:16:35.300 NotebookApp] JupyterLab extension loaded from /opt/conda/lib/python3.7/site-packages/jupyterlab
+[I 20:16:35.301 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+[I 20:16:36.242 NotebookApp] Serving notebooks from local directory: /notebooks/Jarvis/Jarvis
+[I 20:16:36.243 NotebookApp] The Jupyter Notebook is running at:
+[I 20:16:36.243 NotebookApp] http://5c487b7d4cbc:8888/?token=27fc09033ce5c4f8b80fda6856dd71ec87cde9c161c5f951
+[I 20:16:36.244 NotebookApp]  or http://127.0.0.1:8888/?token=27fc09033ce5c4f8b80fda6856dd71ec87cde9c161c5f951
+[I 20:16:36.244 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 20:16:36.248 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/jovyan/.local/share/jupyter/runtime/nbserver-123-open.html
+    Or copy and paste one of these URLs:
+        http://5c487b7d4cbc:8888/?token=27fc09033ce5c4f8b80fda6856dd71ec87cde9c161c5f951
+     or http://127.0.0.1:8888/?token=27fc09033ce5c4f8b80fda6856dd71ec87cde9c161c5f951
+[I 20:17:16.428 NotebookApp] 302 GET /?token=27fc09033ce5c4f8b80fda6856dd71ec87cde9c161c5f951 (172.31.98.200) 1.00ms
+[E 20:17:16.485 NotebookApp] Could not open static file ''
+[W 20:17:16.509 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.31.98.200) 7.44ms referer=http://localhost:8888/tree?token=27fc09033ce5c4f8b80fda6856dd71ec87cde9c161c5f951
+[I 20:17:51.295 NotebookApp] Creating new notebook in 
+[I 20:17:51.339 NotebookApp] Writing notebook-signing key to /home/jovyan/.local/share/jupyter/notebook_secret
+[W 20:17:52.111 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.31.98.200) 5.90ms referer=http://localhost:8888/notebooks/Untitled.ipynb?kernel_name=python3
+[I 20:17:52.788 NotebookApp] Kernel started: 0312538f-553d-4784-bc7e-8d856f13802c
+[I 20:19:52.636 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 20:21:52.645 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 20:23:52.694 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 20:25:52.691 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 20:33:52.647 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 20:35:52.650 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 20:37:52.677 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 20:39:52.677 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 20:41:52.697 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 20:43:52.698 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 20:45:32.378 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 20:49:31.507 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 21:30:07.077 NotebookApp] Starting buffering for 0312538f-553d-4784-bc7e-8d856f13802c:a75d8bb2c75c477e934afcf3a77dec11
+[W 21:30:07.336 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.31.98.200) 6.65ms referer=http://localhost:8888/notebooks/TestAPIs.ipynb
+[I 21:32:08.019 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 21:34:08.073 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 21:36:07.998 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 21:38:08.056 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 22:42:05.867 NotebookApp] 302 GET /?token=8ea340584b4be1c3d3b52ce6f0ad2035a41de683f5c9039a (172.31.98.200) 9.20ms
+[W 22:42:05.915 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.31.98.200) 3.13ms referer=http://localhost:8888/tree?token=8ea340584b4be1c3d3b52ce6f0ad2035a41de683f5c9039a
+[W 22:42:09.558 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.31.98.200) 2.44ms referer=http://localhost:8888/notebooks/TestAPIs.ipynb
+[I 22:44:10.268 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 22:44:41.203 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 22:46:10.306 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 22:48:10.262 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 22:50:10.299 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 22:56:10.304 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 22:58:10.294 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 23:00:10.261 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 23:02:10.256 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 23:08:10.937 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 23:13:15.303 NotebookApp] Creating new file in 
+[W 23:13:15.499 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (172.31.98.200) 13.24ms referer=http://localhost:8888/edit/untitled.txt
+[I 23:16:10.269 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 23:20:08.069 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 23:22:10.260 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 23:24:05.310 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 23:26:10.980 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 23:28:10.247 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 23:30:10.974 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 23:38:10.275 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 23:39:13.629 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 23:39:27.388 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 23:48:25.615 NotebookApp] Saving file at /docker-compose.yml
+[I 00:00:31.563 NotebookApp] Saving file at /docker-compose.yml
+[I 00:01:55.274 NotebookApp] Saving file at /docker-compose.yml
+[I 00:06:52.998 NotebookApp] Saving file at /docker-compose.yml
+[I 00:07:00.255 NotebookApp] Saving file at /docker-compose.yml
+[I 00:10:00.242 NotebookApp] Saving file at /docker-compose.yml
+[I 00:16:10.266 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:19:44.963 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:20:10.295 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:22:10.276 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:23:19.355 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:23:22.745 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:24:53.273 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:28:10.258 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:28:13.466 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:36:50.343 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:37:05.115 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:40:10.314 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:41:01.285 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:41:05.830 NotebookApp] Saving file at /docker-compose.yml
+[I 00:44:10.297 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:45:03.863 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:45:04.077 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:45:07.414 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:46:06.512 NotebookApp] Kernel interrupted: 0312538f-553d-4784-bc7e-8d856f13802c
+[I 00:46:10.306 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:48:05.768 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:49:03.636 NotebookApp] Kernel interrupted: 0312538f-553d-4784-bc7e-8d856f13802c
+[I 00:50:05.084 NotebookApp] Kernel interrupted: 0312538f-553d-4784-bc7e-8d856f13802c
+[I 00:50:10.253 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 00:50:13.227 NotebookApp] Kernel interrupted: 0312538f-553d-4784-bc7e-8d856f13802c
+[I 00:50:30.027 NotebookApp] Kernel interrupted: 0312538f-553d-4784-bc7e-8d856f13802c
+[I 00:52:10.315 NotebookApp] Saving file at /TestAPIs.ipynb
+[W 01:28:08.101 NotebookApp] WebSocket ping timeout after 1889998 ms.
+[W 01:28:10.366 NotebookApp] WebSocket ping timeout after 1889997 ms.
+[I 01:28:15.370 NotebookApp] Starting buffering for 0312538f-553d-4784-bc7e-8d856f13802c:967bdeae5e1143028560cc046b40a7de
+[I 01:28:17.331 NotebookApp] Restoring connection for 0312538f-553d-4784-bc7e-8d856f13802c:967bdeae5e1143028560cc046b40a7de
+[W 01:32:19.486 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 7.55ms referer=http://localhost:8888/notebooks/TestAPIs.ipynb
+[I 01:33:00.662 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 01:34:20.708 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 01:36:20.800 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 01:38:20.771 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 01:42:20.766 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 01:43:55.744 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 01:44:10.316 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 01:47:18.682 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 01:50:21.039 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 01:52:20.767 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 01:52:46.200 NotebookApp] 302 GET /?token=44b13a68035cb98aaf6c272120f45359b4673e4ed5fa63b7 (10.0.75.1) 1.97ms
+[W 01:52:46.248 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 4.11ms referer=http://localhost:8888/tree?token=44b13a68035cb98aaf6c272120f45359b4673e4ed5fa63b7
+[W 01:52:49.791 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 3.05ms referer=http://localhost:8888/notebooks/TestAPIs.ipynb
+[I 01:54:51.716 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 01:56:51.719 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 01:58:51.645 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 02:17:46.371 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 02:18:51.695 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 02:26:51.701 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 02:28:51.714 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 02:48:40.081 NotebookApp] Kernel interrupted: 0312538f-553d-4784-bc7e-8d856f13802c
+[I 02:48:51.698 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 02:50:51.655 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 02:52:51.717 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 02:53:03.663 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 02:53:11.969 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 02:54:51.691 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 02:55:53.007 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 02:55:54.650 NotebookApp] Kernel interrupted: 0312538f-553d-4784-bc7e-8d856f13802c
+[I 02:56:29.433 NotebookApp] Kernel interrupted: 0312538f-553d-4784-bc7e-8d856f13802c
+[I 02:56:51.697 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 02:56:52.274 NotebookApp] Kernel interrupted: 0312538f-553d-4784-bc7e-8d856f13802c
+[I 02:57:15.165 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 02:57:22.017 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 03:30:09.142 NotebookApp] 302 GET /?token=18132f980215d439b64363c62ec21d9c66d1954bc67961b5 (10.0.75.1) 2.35ms
+[W 03:30:09.199 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 10.46ms referer=http://localhost:8888/tree?token=18132f980215d439b64363c62ec21d9c66d1954bc67961b5
+[W 03:30:12.303 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 2.87ms referer=http://localhost:8888/notebooks/TestAPIs.ipynb
+[I 03:32:14.375 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 03:34:14.367 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 03:36:14.331 NotebookApp] Kernel interrupted: 0312538f-553d-4784-bc7e-8d856f13802c
+[I 03:36:14.375 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 03:38:14.331 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 03:39:31.908 NotebookApp] 302 GET /?token=a5f80df4b1448a37b3f5dd305e26e4c9e4097bdccbbce0c4 (10.0.75.1) 1.02ms
+[W 03:39:31.960 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 4.14ms referer=http://localhost:8888/tree?token=a5f80df4b1448a37b3f5dd305e26e4c9e4097bdccbbce0c4
+[W 03:39:35.357 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 2.91ms referer=http://localhost:8888/notebooks/TestAPIs.ipynb
+[I 03:41:37.439 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 03:45:37.459 NotebookApp] Saving file at /TestAPIs.ipynb
+[I 03:45:45.760 NotebookApp] Kernel interrupted: 0312538f-553d-4784-bc7e-8d856f13802c
+[I 03:46:58.463 NotebookApp] Kernel shutdown: 0312538f-553d-4784-bc7e-8d856f13802c
+[W 03:47:03.948 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 16.72ms referer=http://localhost:8888/tree
+[W 03:47:06.028 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 13.20ms referer=http://localhost:8888/tree
+[W 03:47:36.090 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 3.01ms referer=http://localhost:8888/edit/README.md
+[I 03:47:38.378 NotebookApp] Saving file at /TestAPIs.ipynb
+[W 03:47:53.190 NotebookApp] 404 GET /api/kernels/0312538f-553d-4784-bc7e-8d856f13802c/channels?session_id=ee12fafd0a984bdd8c20e50ef5a3e73b (10.0.75.1): Kernel does not exist: 0312538f-553d-4784-bc7e-8d856f13802c
+[W 03:47:53.195 NotebookApp] 404 GET /api/kernels/0312538f-553d-4784-bc7e-8d856f13802c/channels?session_id=ee12fafd0a984bdd8c20e50ef5a3e73b (10.0.75.1) 12.55ms referer=None
+[W 03:47:55.331 NotebookApp] Replacing stale connection: 0312538f-553d-4784-bc7e-8d856f13802c:ee12fafd0a984bdd8c20e50ef5a3e73b
+[W 03:48:24.754 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 14.50ms referer=http://localhost:8888/tree
+[I 03:48:38.112 NotebookApp] 302 GET / (10.0.75.1) 1.23ms
+[W 03:48:38.262 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 4.11ms referer=http://localhost:8888/tree?
+[I 03:48:49.994 NotebookApp] 302 GET / (10.0.75.1) 0.61ms
+[W 03:48:50.108 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 2.79ms referer=http://localhost:8888/tree?
+[W 03:51:57.914 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 18.51ms referer=http://localhost:8888/tree?
+[W 03:52:03.944 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 3.50ms referer=http://localhost:8888/notebooks/TestAPIs.ipynb
+[I 03:52:05.595 NotebookApp] Kernel started: 78cf8736-7328-4421-87a3-fe213b19de5b
+[W 03:52:35.134 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (10.0.75.1) 5.21ms referer=http://localhost:8888/notebooks/TestAPIs.ipynb
+[W 03:53:05.666 NotebookApp] Timeout waiting for kernel_info reply from 78cf8736-7328-4421-87a3-fe213b19de5b
+[W 03:53:19.411 NotebookApp] zmq message arrived on closed channel
+[W 03:53:19.413 NotebookApp] zmq message arrived on closed channel
+[W 03:53:19.416 NotebookApp] zmq message arrived on closed channel
+[W 03:53:19.421 NotebookApp] zmq message arrived on closed channel
+[W 03:53:19.425 NotebookApp] zmq message arrived on closed channel
+[W 03:53:19.432 NotebookApp] zmq message arrived on closed channel
+[W 03:53:19.437 NotebookApp] zmq message arrived on closed channel
+[W 03:53:19.440 NotebookApp] zmq message arrived on closed channel
+[W 03:53:19.443 NotebookApp] zmq message arrived on closed channel
