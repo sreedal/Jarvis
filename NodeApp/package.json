@@ -1,0 +1,15 @@
+{
+    "name": "Jarvis_Node",
+    "version": "1.0.0",
+    "description": "Node.js based web app for Jarvis running on Docker",
+    "author": "Sreedal Menon <sreedal@gmail.com>",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "bluebird": "^3.7.1",
+        "express": "^4.16.1",
+        "redis": "^2.8.0"
+    }
+}
