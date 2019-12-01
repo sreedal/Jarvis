@@ -1,0 +1,500 @@
+  167  docker --info
+  168  docker --version
+  169  docker-machine env default
+  170  sudo docker-machine env default
+  171  docker-machine ls
+  172  sudo docker-machine ls
+  173  sudo docker-machine env Basic
+  174  docker-machine start Basic
+  175  sudo docker-machine start Basic
+  176  docker ps
+  177  docker-machine env default
+  178  sudo docker-machine create default
+  179  ls
+  180  cat README.md 
+  181  sudo docker-machine env default
+  182  sudo docker-machine start default
+  183  bin/dockler.sh 
+  184  docker run
+  185  sl
+  186  ls
+  187  git status
+  188  cd ..
+  189  ls
+  190  cd ..
+  191  ls
+  192  cd ..
+  193  ls
+  194  cd Work
+  195  ls
+  196  mkdir Workspace
+  197  cd Workspace/
+  198  git clone https://rituparnakar.visualstudio.com/_git/YetAnotherNewsFeed
+  199  ls
+  200  cd YetAnotherNewsFeed/
+  201  ls
+  202  git branch
+  203  git fetch
+  204  ls
+  205  cat Readme.txt 
+  206  ls focusedCrawler
+  207  ls
+  208  ls focusedCrawler/
+  209  ls focusedCrawler/rssParser/
+  210  cat focusedCrawler/rssParser/RSSFeedsParser.py 
+  211  cat focusedCrawler/rssParser/RSSFeedsFile.in 
+  212  cd focusedCrawler/rssParser/
+  213  python 
+  214  python RSSFeedsParser.py RSSFeedsFile.in 1
+  215  pip install feedparser
+  216  python RSSFeedsParser.py RSSFeedsFile.in 1
+  217  exit
+  218  top
+  219  jupyter notebook
+  220  brew cask install java
+  221  brew install scala
+  222  brew install apache-spark
+  223  spark-shell
+  224  echo SPARK_HOME
+  225  echo $SPARK_HOME
+  226  export SPARK_HOME=/usr/local/Cellar/apache-spark/2.3.1/libexec
+  227  export PYTHONPATH=/usr/local/Cellar/apache-spark/2.3.1/libexec/python/:$PYTHONP$
+  228  spark-shell
+  229  brew cask uninstall java
+  230  brew tap caskroom/versions
+  231  brew cask search java
+  232  brew cask install java8
+  233  spark-shell
+  234  jupyter kernelspec list
+  235  pip install jupyter-scala
+  236  pip install --upgrade pip
+  237  pip install jupyter-scala
+  238  ipython --version
+  239  scala --kernel-spec
+  240  cd Work
+  241  cd Workspace/
+  242  cd YetAnotherNewsFeed/
+  243  cd algoplatform/
+  244  jupyter notebook
+  245  pwd
+  246  ls
+  247  cd Work
+  248  ls
+  249  ls Workspace/
+  250  cd ..
+  251  cd Workspace/
+  252  ls
+  253  cd ..
+  254  ls
+  255  cd PythonScripts/
+  256  ls
+  257  jupyter notebook
+  258  brew install rstudio
+  259  ls
+  260  make
+  261  brew install docker
+  262  docker start
+  263  dockerd start
+  264  dockerd --start
+  265  sudo su
+  266  brew cask install docker
+  267  docker ps
+  268  docker-machine create --driver virtualbox default
+  269  sudo docker-machine create --driver virtualbox default
+  270  eval "$(docker-machine env default)"
+  271  sudo eval "$(docker-machine env default)"
+  272  sudo "$(docker-machine env default)"
+  273  sudo "$(docker-machine env default)"
+  274  docker-machne env default
+  275  docker-machine env default
+  276  sudo "docker-machine env default"
+  277  sudo su
+  278  vim tmp.cpp
+  279  g++ tmp.cpp 
+  280  vim tmp.cpp
+  281  g++ tmp.cpp 
+  282  vim tmp.cpp
+  283  g++ tmp.cpp 
+  284  ./a.out 
+  285  vim tmp.cpp
+  286  sudo su
+  287  ps aux | grep itune
+  288  ps aux | grep itunes
+  289  ps aux 
+  290  top
+  291  sudo reboot
+  292  mount
+  293  ls /dev/disk
+  294  ls /dev/disk*
+  295  parted
+  296  sudo parted
+  297  sudo apt-get install parted
+  298  brew install parted
+  299  clear
+  300  ls
+  301  exit
+  302  brew
+  303  cleas
+  304  clear
+  305  brew install node
+  306  brew install watchman
+  307  brew install flow
+  308  npm install -g react-native-cli
+  309  brew cask install sublime-text
+  310  brew cask install sublime-js
+  311  du -hs
+  312  df -h
+  313  mkdir learnreact
+  314  cd learnreact/
+  315  react-native init FirstProject
+  316  ls
+  317  ls FirstProject/
+  318  react-native init SecondProject
+  319  /Users/sreedal/learnreact/ThirdProject/node_modules/react-native/scripts/launchPackager.command ; exit;
+  320  /Users/sreedal/learnreact/ThirdProject/node_modules/react-native/scripts/launchPackager.command ; exit;
+  321  cd learnreact/
+  322  react-native init ThirdProject
+  323  open .
+  324  cd ThirdProject/
+  325  ls
+  326  cd ios/
+  327  react-native run-ios
+  328  react-native --help
+  329  ls
+  330  clear
+  331  l
+  332  ls
+  333  cler
+  334  clear
+  335  /Users/sreedal/learnreact/ThirdProject/ios/FourthProject/node_modules/react-native/scripts/launchPackager.command ; exit;
+  336  /Users/sreedal/learnreact/ThirdProject/ios/FourthProject/node_modules/react-native/scripts/launchPackager.command ; exit;
+  337  /Users/sreedal/learnreact/ThirdProject/ios/FourthProject/node_modules/react-native/scripts/launchPackager.command ; exit;
+  338  npm install --save moment react-native-keep-awake
+  339  ls
+  340  npm audit fix
+  341  watchman watch-del-all && react-native start --reset-cache
+  342  exit
+  343  expo start
+  344  exit
+  345  cd learnreact/
+  346  cd ThirdProject/
+  347  cd ios/
+  348  cd FifthProj/
+  349  npm install --save moment react-native-keep-awake
+  350  expo start
+  351  npm start &
+  352  echo start &
+  353  echo start
+  354  npm run ios
+  355  subl .
+  356  npm build
+  357  npm start
+  358  ps aux | grep 8081
+  359  ps aux | grep npm
+  360  ps auxp | grep npm
+  361  ps -Aux 
+  362  ps Aux 
+  363  ps Aux | grep 8081
+  364  ps aux | grep echo
+  365  netstat -p | grep 8081
+  366  netstat ltnpp | grep 8081
+  367  netstat -ltnp | grep 8081
+  368  netstat -ltn | grep 8081
+  369  netstat -ltn 
+  370  lsof -i :8081
+  371  killall -s KILL 665
+  372  killall -s KILL -p 665
+  373  man killall
+  374  man kill
+  375  kill -s KILL 665
+  376  npm start
+  377  ls
+  378  rm -rf ../FourthProject
+  379  npm start
+  380  npm start .
+  381  ls node_modules/
+  382  ls
+  383  npm start .
+  384  ls package.json 
+  385  vim package.json 
+  386  grep -r getAssets.js .
+  387  grep -r "getJsOutput(module).type" .
+  388  vim ./node_modules/metro/src/DeltaBundler/Serializers/getAssets.js
+  389  npm start .
+  390  vim ./node_modules/metro/src/DeltaBundler/Serializers/getAssets.js
+  391  grep -r getAssets.js ../../
+  392  cd ..
+  393  mv FifthProj ../../
+  394  cd ../..
+  395  ls
+  396  cd Fi
+  397  cd FifthProj/
+  398  npm start
+  399  exit
+  400  /Users/sreedal/learnreact/SixthProj/node_modules/react-native/scripts/launchPackager.command ; exit;
+  401  mv react-native-alarm-notification/ node_modules/
+  402  ls node_modules/react-native
+  403  echo start
+  404  expo start
+  405  history
+  406  exit
+  407  cp -r ../SeventhProject/node_modules/react-native-alarm-notification node_modules/
+  408  cp ../SeventhProject/App.js App.js 
+  409  npm install react-native-alarm-notification
+  410  ipconfig
+  411  ifconfig
+  412  pwd
+  413  expo start
+  414  cd learnreact/FifthProj/
+  415  ps aux | grep node
+  416  ps aux | grep expo
+  417  npm start
+  418  cd ..
+  419  expo init SixthProj
+  420  cd SixthProj/ios/
+  421  pod install; cd ../ npm run ios
+  422  npm run ios
+  423  npm run ios
+  424  ps aux | grep npm
+  425  ps aux | grep node
+  426  history
+  427  history | grep create
+  428  history | grep native
+  429  history | grep react
+  430  history | grep Sixth
+  431  ls
+  432  pwd
+  433  cd ..
+  434  expo init SeventhProject
+  435  expo init EighthProject
+  436  cd EighthProject/ios/
+  437  pod install
+  438  cd ..
+  439  ls
+  440  npm run ios
+  441  watchman watch-del-all && react-native start --reset-cache
+  442  killall node
+  443  watchman watch-del-all && react-native start --reset-cache
+  444  ls /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  445  ls /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  446  ls /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  447  ls /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  448  du -hs /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  449  du -hs /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  450  du -hs /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  451  ls
+  452  ls Pictures/
+  453  ls Documents/
+  454  du -hs /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  455  cd /Volumes/Sreedal/
+  456  mkdir Workspace
+  457  cd Workspace/
+  458  git clone https://github.com/sreedal/Jarvis
+  459  ls
+  460  ls JA
+  461  ls J
+  462  ls Jarvis/
+  463  cd Jarvis/
+  464  docker-compose up
+  465  docker swarm init
+  466  docker-compose up
+  467  docker container list
+  468  docker service list
+  469  docker container list
+  470  docker-compose down
+  471  vim docker-compose.yml 
+  472  ls
+  473  cd Service/
+  474  ls
+  475  docker-compose up
+  476  vim docker-compose.yml 
+  477  cd ..
+  478  cp -r Service Service_OSX
+  479  cd Service_OSX/
+  480  vim docker-compose.yml 
+  481  pwd
+  482  vim docker-compose.yml 
+  483  vscode docker-compose.yml 
+  484  ls
+  485  ls ..\..
+  486  ls ../..
+  487  pwd ../../
+  488  cd ../..
+  489  pwd
+  490  docker container list
+  491  docker exec spark jupyter notbooks list
+  492  docker container exec spark jupyter notbook list
+  493  docker container exec service_osx_spark jupyter notbook list
+  494  docker container exec service_osx_spark_1 jupyter notbook list
+  495  docker container exec service_osx_spark_1 jupyter notbooks list
+  496  docker container exec service_osx_spark_1 jupyter notebook list
+  497  docker container exec service_osx_devenv_1 jupyter notebook list
+  498  docker container exec service_osx_devenv_1 -it /bin/bash
+  499  docker container exec -it service_osx_devenv_1 /bin/bash
+  500  exit
+  501  ls
+  502  cd ..
+  503  ls
+  504  cd ..
+  505  ls
+  506  ls FinanceData.csv/
+  507  ls FinanceData.csv/ -la
+  508  ls -la FinanceData.csv/
+  509  date
+  510  ls -la FinanceData.csv/
+  511  cat FinanceData.csv/part-00000-26808e21-2ed2-4197-a99a-33f6e4e1a8a4-c000.csv
+  512  cat FinanceData.csv/part-00000-26808e21-2ed2-4197-a99a-33f6e4e1a8a4-c000.csv
+  513  kubeadm init
+  514  brew install kubeadm
+  515  ls -la FinanceData.csv/
+  516  clear
+  517  ls
+  518  ls
+  519  cd Jarvis/
+  520  ls
+  521  mkdir AKSTutorial
+  522  cd AKSTutorial/
+  523  ls
+  524  git clone https://github.com/Azure-Samples/azure-voting-app-redis.git
+  525  cd azure-voting-app-redis/
+  526  docker-compose up -d
+  527  docker container list
+  528  docker-compose down
+  529  brew update && brew install azure-cli
+  530  az login
+  531  brew update && brew install azure-cli
+  532  brew update && brew install azure-cli
+  533  az login
+  534  az acr create --resource-group Jarvis --name JarvisACR --sku Basic 
+  535  az subscription list
+  536  az --help
+  537  az account --help
+  538  az account list
+  539  az account set ff56ba5d-4f45-4ab1-8bf5-9f87a858caec
+  540  az account set --subscription ff56ba5d-4f45-4ab1-8bf5-9f87a858caec
+  541  az account list
+  542  az acr create --resource-group Jarvis --name JarvisACR --sku Basic 
+  543  az acr login --name jarvisacr.azurecr.io
+  544  az acr login --name JarvisACR
+  545  docker images
+  546  docker tag 
+  547  docker tag azure-vote-front jarvisacr.azurecr.io/azure-vote-front:v1
+  548  docker images
+  549  docker push jarvisacr.azurecr.io/azure-vote-front:v1
+  550  az acr repository list --name JarvisACR --output table
+  551  az aks list
+  552  az aks --help
+  553  az aks update --help
+  554  az aks update --resource-group Jarvis --name Jarvis-K8 --attach-acr JarvisACR --generate-ssh-keys
+  555  az aks update --resource-group Jarvis --name Jarvis-K8 --attach-acr JarvisACR
+  556  az aks install-cli
+  557  echo $PATH
+  558  az aks get-credentials --resource-group Jarvis --name Jarvis-K8
+  559  kubectl get nodes
+  560  ls
+  561  vim azure-vote-all-in-one-redis.yaml 
+  562  kubectl apply -f azure-vote-all-in-one-redis.yaml 
+  563  kubectl get service azure-vote-front --watch
+  564  clear
+  565  ls
+  566  vim azure-vote-all-in-one-redis.yaml 
+  567  docker container list
+  568  kubectl delete -f azure-vote-all-in-one-redis.yaml 
+  569  cd ..
+  570  cd ..
+  571  ls
+  572  cd Service_OSX/
+  573  ls
+  574  kubectl apply -f azure-k8s-compose-test.yml 
+  575  kubectl get service devenv 
+  576  kubectl get service devenv 
+  577  kubectl get pods
+  578  kubectl logs devenv-847cccf5d-ztc4t
+  579  kubectl describe pods
+  580  $ az aks show --resource-group myResourceGroup --name myAKSCluster --query nodeResourceGroup -o tsv
+  581  $ az aks show --resource-group Jarvis --name Jarvis-K8 --query nodeResourceGroup -o tsv
+  582  az aks show --resource-group Jarvis --name Jarvis-K8 --query nodeResourceGroup -o tsv
+  583  az disk create --resource-group Jarvis --name Jarvis-Disk --size-gb 512 --query MC_Jarvis_Jarvis-K8_westus2 --output tsv
+  584  az disk create --resource-group Jarvis --name Jarvis-Disk --size-gb 512 --query id --output tsv
+  585  kubectl delete -f azure-k8s-compose-test.yml 
+  586  kubectl apply -f azure-k8s-compose-test.yml 
+  587  kubectl get pods
+  588  kubectl get pods
+  589  kubectl describe pods
+  590  kubectl describe pods
+  591  kubectl describe pods
+  592  kubectl delete -f azure-k8s-compose-test.yml 
+  593  az provider register -n Microsoft.Compute
+  594  kubectl apply -f azure-k8s-compose-test.yml 
+  595  kubectl get pods
+  596  kubectl describe pods
+  597  kubectl describe pods
+  598  kubectl delete -f azure-k8s-compose-test.yml 
+  599  kubectl apply -f azure-k8s-compose-test.yml 
+  600  kubectl describe pods
+  601  kubectl describe pods
+  602  kubectl get pods
+  603  kubectl describe pods
+  604  kubectl logs devenv
+  605  kubectl logs devenv-6bbdc64bc7-hbgbg
+  606  kubectl describe pods
+  607  kubectl delete -f azure-k8s-compose-test.yml 
+  608  kubectl apply -f azure-k8s-compose-test.yml 
+  609  kubectl describe pods
+  610  kubectl describe pods
+  611  kubectl describe pods
+  612  az ad sp -h
+  613  az ad sp list
+  614  az ad sp -h
+  615  az ad sp create-for-rbac
+  616  kubectl describe pods
+  617  kubectl delete -f azure-k8s-compose-test.yml 
+  618  kubectl apply -f azure-k8s-compose-test.yml 
+  619  kubectl describe pods
+  620  kubectl describe pods
+  621  az subscrition list
+  622  az subscription list
+  623  az --help
+  624  az account list
+  625  kubectl describe pods
+  626  kubectl describe pods
+  627  kubectl delete -f azure-k8s-compose-test.yml 
+  628  kubectl apply -f azure-k8s-compose-test.yml 
+  629  kubectl describe pods
+  630  kubectl describe pods
+  631  kubectl describe pods
+  632  kubectl describe pods
+  633  kubectl describe pods
+  634  kubectl get pods
+  635  kubectl describe pods
+  636  history > History.tt
+  637  history 
+  638  az disk create --resource-group Jarvis --name Jarvis-Disk --location westus2 --size-gb 512 --query id --output tsv
+  639  kubectl delete -f azure-k8s-compose-test.yml 
+  640  kubectl apply -f azure-k8s-compose-test.yml 
+  641  kubectl get pods
+  642  kubectl describe pods
+  643  kubectl delete -f azure-k8s-compose-test.yml 
+  644  kubectl apply -f azure-k8s-compose-test.yml 
+  645  kubectl delete -f azure-k8s-compose-test.yml 
+  646  kubectl apply -f azure-k8s-compose-test.yml 
+  647  kubectl describe pods
+  648  kubectl describe pods
+  649  kubectl delete -f azure-k8s-compose-test.yml 
+  650  kubectl apply -f azure-k8s-compose-test.yml 
+  651  kubectl describe pods
+  652  kubectl describe pods
+  653  kubectl get pv
+  654  kubectl describe pods
+  655  history
+  656  kubectl get service devenv
+  657  kubectl exec devenv -- jupyter notebook list
+  658  kubectl get pods
+  659  kubectl exec devenv-67c9bdf789-xgwnm -- jupyter notebook list
+  660  git status
+  661  git add ../AKSTutorial
+  662  git rm --cached AKSTutorial/azure-voting-app-redis
+  663  git rm --cached ../AKSTutorial/azure-voting-app-redis
+  664  git rm --cached -f ../AKSTutorial/azure-voting-app-redis
+  665  git status
+  666  history > History.tt 

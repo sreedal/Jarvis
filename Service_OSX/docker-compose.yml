@@ -1,0 +1,103 @@
+version: '3.2'
+networks:
+  kafka-net:
+    driver: overlay
+services:
+  zookeeper:
+    image: qnib/plain-zookeeper:latest
+    ports:
+      - "2181:2181"
+    networks: 
+      - kafka-net
+  zkui:
+    image: qnib/plain-zkui:latest
+    ports:
+      - "9090:9090"
+    networks: 
+      - kafka-net
+  broker:
+    image: qnib/plain-kafka:latest
+    ports:
+      - "9092:9092"
+    networks: 
+      - kafka-net
+    deploy:
+      replicas: 1
+    depends_on:
+      - zookeeper
+    environment:
+      - ZK_SERVERS=zookeeper
+  manager:
+    image: qnib/plain-kafka-manager:latest
+    networks: 
+      - kafka-net
+    ports:
+      - "9000:9000"
+    environment:
+      ZOOKEEPER_HOSTS: "zookeeper:2181"
+  devenv:
+    image: jupyter/tensorflow-notebook
+    networks: 
+      - kafka-net
+    ports:
+      - "8888:8888"
+    deploy:
+      replicas: 1
+    volumes: 
+      - type: bind
+        source: '/Users/sreedal/Workspace'
+        target: '/home/jovyan/work'
+    command: bash -c "sleep 40 && jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --clear-output /home/jovyan/work/Jarvis/DevEnv_Prod.ipynb"
+  spark:
+    image: jupyter/pyspark-notebook
+    networks: 
+      - kafka-net
+    ports:
+      - "8880:8888"
+    deploy:
+      replicas: 1
+    volumes: 
+      - type: bind
+        source: '/Users/sreedal/Workspace'
+        target: '/home/jovyan/work'
+    command: bash -c "sleep 40 && jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --clear-output /home/jovyan/work/Jarvis/Spark_Prod.ipynb"
+  serving:
+    image: tensorflow/serving
+    networks: 
+      - kafka-net
+    ports:
+      - "8501:8501"
+    deploy:
+      replicas: 1
+    volumes:
+      - type: bind
+        source: '/Users/sreedal/Workspace/serving/tensorflow_serving/servables/tensorflow/testdata/saved_model_half_plus_two_cpu'
+        target: '/models/half_plus_two'
+    environment:
+      - MODEL_NAME=half_plus_two
+  redis-store:
+    image: redis
+    networks: 
+      - kafka-net
+    ports:
+      - "6379:6379"
+    deploy:
+      replicas: 1
+  jarvis-node:
+    image: sreedal/jarvis-node
+    networks: 
+      - kafka-net
+    ports:
+      - "49160:8080"
+    deploy:
+      replicas: 1
+    volumes: 
+      - type: bind
+        source: '/Users/sreedal/Workspace/Jarvis/NodeApp'
+        target: '/usr/src/app'
+  networkdebug:
+    image: nicolaka/netshoot
+    networks: 
+      - kafka-net
+    deploy:
+      replicas: 0
