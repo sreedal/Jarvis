@@ -498,3 +498,506 @@
   664  git rm --cached -f ../AKSTutorial/azure-voting-app-redis
   665  git status
   666  history > History.tt 
+
+
+
+k8s.gcr.io/kubernetes-zookeeper:1.0-3.4.10  358  ps aux | grep 8081
+  359  ps aux | grep npm
+  360  ps auxp | grep npm
+  361  ps -Aux 
+  362  ps Aux 
+  363  ps Aux | grep 8081
+  364  ps aux | grep echo
+  365  netstat -p | grep 8081
+  366  netstat ltnpp | grep 8081
+  367  netstat -ltnp | grep 8081
+  368  netstat -ltn | grep 8081
+  369  netstat -ltn 
+  370  lsof -i :8081
+  371  killall -s KILL 665
+  372  killall -s KILL -p 665
+  373  man killall
+  374  man kill
+  375  kill -s KILL 665
+  376  npm start
+  377  ls
+  378  rm -rf ../FourthProject
+  379  npm start
+  380  npm start .
+  381  ls node_modules/
+  382  ls
+  383  npm start .
+  384  ls package.json 
+  385  vim package.json 
+  386  grep -r getAssets.js .
+  387  grep -r "getJsOutput(module).type" .
+  388  vim ./node_modules/metro/src/DeltaBundler/Serializers/getAssets.js
+  389  npm start .
+  390  vim ./node_modules/metro/src/DeltaBundler/Serializers/getAssets.js
+  391  grep -r getAssets.js ../../
+  392  cd ..
+  393  mv FifthProj ../../
+  394  cd ../..
+  395  ls
+  396  cd Fi
+  397  cd FifthProj/
+  398  npm start
+  399  exit
+  400  /Users/sreedal/learnreact/SixthProj/node_modules/react-native/scripts/launchPackager.command ; exit;
+  401  mv react-native-alarm-notification/ node_modules/
+  402  ls node_modules/react-native
+  403  echo start
+  404  expo start
+  405  history
+  406  exit
+  407  cp -r ../SeventhProject/node_modules/react-native-alarm-notification node_modules/
+  408  cp ../SeventhProject/App.js App.js 
+  409  npm install react-native-alarm-notification
+  410  ipconfig
+  411  ifconfig
+  412  pwd
+  413  expo start
+  414  cd learnreact/FifthProj/
+  415  ps aux | grep node
+  416  ps aux | grep expo
+  417  npm start
+  418  cd ..
+  419  expo init SixthProj
+  420  cd SixthProj/ios/
+  421  pod install; cd ../ npm run ios
+  422  npm run ios
+  423  npm run ios
+  424  ps aux | grep npm
+  425  ps aux | grep node
+  426  history
+  427  history | grep create
+  428  history | grep native
+  429  history | grep react
+  430  history | grep Sixth
+  431  ls
+  432  pwd
+  433  cd ..
+  434  expo init SeventhProject
+  435  expo init EighthProject
+  436  cd EighthProject/ios/
+  437  pod install
+  438  cd ..
+  439  ls
+  440  npm run ios
+  441  watchman watch-del-all && react-native start --reset-cache
+  442  killall node
+  443  watchman watch-del-all && react-native start --reset-cache
+  444  ls /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  445  ls /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  446  ls /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  447  ls /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  448  du -hs /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  449  du -hs /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  450  du -hs /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  451  ls
+  452  ls Pictures/
+  453* 
+  454  du -hs /Volumes/Sreedal/Backup/2019Nov/Downloads/
+  455  cd /Volumes/Sreedal/
+  456  mkdir Workspace
+  457  cd Workspace/
+  458  git clone https://github.com/sreedal/Jarvis
+  459  ls
+  460  ls JA
+  461  ls J
+  462  ls Jarvis/
+  463  cd Jarvis/
+  464  docker-compose up
+  465  docker swarm init
+  466  docker-compose up
+  467  docker container list
+  468  docker service list
+  469  docker container list
+  470  docker-compose down
+  471  vim docker-compose.yml 
+  472  ls
+  473  cd Service/
+  474  ls
+  475  docker-compose up
+  476  vim docker-compose.yml 
+  477  cd ..
+  478  cp -r Service Service_OSX
+  479  cd Service_OSX/
+  480  vim docker-compose.yml 
+  481  pwd
+  482  vim docker-compose.yml 
+  483  vscode docker-compose.yml 
+  484  ls
+  485  ls ..\..
+  486  ls ../..
+  487  pwd ../../
+  488  cd ../..
+  489  pwd
+  490  docker container list
+  491  docker exec spark jupyter notbooks list
+  492  docker container exec spark jupyter notbook list
+  493  docker container exec service_osx_spark jupyter notbook list
+  494  docker container exec service_osx_spark_1 jupyter notbook list
+  495  docker container exec service_osx_spark_1 jupyter notbooks list
+  496  docker container exec service_osx_spark_1 jupyter notebook list
+  497  docker container exec service_osx_devenv_1 jupyter notebook list
+  498  docker container exec service_osx_devenv_1 -it /bin/bash
+  499  docker container exec -it service_osx_devenv_1 /bin/bash
+  500  exit
+  501  ls
+  502  cd ..
+  503  ls
+  504  cd ..
+  505  ls
+  506  ls FinanceData.csv/
+  507  ls FinanceData.csv/ -la
+  508  ls -la FinanceData.csv/
+  509  date
+  510  ls -la FinanceData.csv/
+  511  cat FinanceData.csv/part-00000-26808e21-2ed2-4197-a99a-33f6e4e1a8a4-c000.csv
+  512  cat FinanceData.csv/part-00000-26808e21-2ed2-4197-a99a-33f6e4e1a8a4-c000.csv
+  513  kubeadm init
+  514  brew install kubeadm
+  515  ls -la FinanceData.csv/
+  516  clear
+  517  ls
+  518  ls
+  519  cd Jarvis/
+  520  ls
+  521  mkdir AKSTutorial
+  522  cd AKSTutorial/
+  523  ls
+  524  git clone https://github.com/Azure-Samples/azure-voting-app-redis.git
+  525  cd azure-voting-app-redis/
+  526  docker-compose up -d
+  527  docker container list
+  528  docker-compose down
+  529  brew update && brew install azure-cli
+  530  az login
+  531  brew update && brew install azure-cli
+  532  brew update && brew install azure-cli
+  533  az login
+  534  az acr create --resource-group Jarvis --name JarvisACR --sku Basic 
+  535  az subscription list
+  536  az --help
+  537  az account --help
+  538  az account list
+  539  az account set ff56ba5d-4f45-4ab1-8bf5-9f87a858caec
+  540  az account set --subscription ff56ba5d-4f45-4ab1-8bf5-9f87a858caec
+  541  az account list
+  542  az acr create --resource-group Jarvis --name JarvisACR --sku Basic 
+  543  az acr login --name jarvisacr.azurecr.io
+  544  az acr login --name JarvisACR
+  545  docker images
+  546  docker tag 
+  547  docker tag azure-vote-front jarvisacr.azurecr.io/azure-vote-front:v1
+  548  docker images
+  549  docker push jarvisacr.azurecr.io/azure-vote-front:v1
+  550  az acr repository list --name JarvisACR --output table
+  551  az aks list
+  552  az aks --help
+  553  az aks update --help
+  554  az aks update --resource-group Jarvis --name Jarvis-K8 --attach-acr JarvisACR --generate-ssh-keys
+  555  az aks update --resource-group Jarvis --name Jarvis-K8 --attach-acr JarvisACR
+  556  az aks install-cli
+  557  echo $PATH
+  558  az aks get-credentials --resource-group Jarvis --name Jarvis-K8
+  559  kubectl get nodes
+  560  ls
+  561  vim azure-vote-all-in-one-redis.yaml 
+  562  kubectl apply -f azure-vote-all-in-one-redis.yaml 
+  563  kubectl get service azure-vote-front --watch
+  564  clear
+  565  ls
+  566  vim azure-vote-all-in-one-redis.yaml 
+  567  docker container list
+  568  kubectl delete -f azure-vote-all-in-one-redis.yaml 
+  569  cd ..
+  570  cd ..
+  571  ls
+  572  cd Service_OSX/
+  573  ls
+  574  kubectl apply -f azure-k8s-compose-test.yml 
+  575  kubectl get service devenv 
+  576  kubectl get service devenv 
+  577  kubectl get pods
+  578  kubectl logs devenv-847cccf5d-ztc4t
+  579  kubectl describe pods
+  580  $ az aks show --resource-group myResourceGroup --name myAKSCluster --query nodeResourceGroup -o tsv
+  581  $ az aks show --resource-group Jarvis --name Jarvis-K8 --query nodeResourceGroup -o tsv
+  582  az aks show --resource-group Jarvis --name Jarvis-K8 --query nodeResourceGroup -o tsv
+  583  az disk create --resource-group Jarvis --name Jarvis-Disk --size-gb 512 --query MC_Jarvis_Jarvis-K8_westus2 --output tsv
+  584  az disk create --resource-group Jarvis --name Jarvis-Disk --size-gb 512 --query id --output tsv
+  585  kubectl delete -f azure-k8s-compose-test.yml 
+  586  kubectl apply -f azure-k8s-compose-test.yml 
+  587  kubectl get pods
+  588  kubectl get pods
+  589  kubectl describe pods
+  590  kubectl describe pods
+  591  kubectl describe pods
+  592  kubectl delete -f azure-k8s-compose-test.yml 
+  593  az provider register -n Microsoft.Compute
+  594  kubectl apply -f azure-k8s-compose-test.yml 
+  595  kubectl get pods
+  596  kubectl describe pods
+  597  kubectl describe pods
+  598  kubectl delete -f azure-k8s-compose-test.yml 
+  599  kubectl apply -f azure-k8s-compose-test.yml 
+  600  kubectl describe pods
+  601  kubectl describe pods
+  602  kubectl get pods
+  603  kubectl describe pods
+  604  kubectl logs devenv
+  605  kubectl logs devenv-6bbdc64bc7-hbgbg
+  606  kubectl describe pods
+  607  kubectl delete -f azure-k8s-compose-test.yml 
+  608  kubectl apply -f azure-k8s-compose-test.yml 
+  609  kubectl describe pods
+  610  kubectl describe pods
+  611  kubectl describe pods
+  612  az ad sp -h
+  613  az ad sp list
+  614  az ad sp -h
+  615  az ad sp create-for-rbac
+  616  kubectl describe pods
+  617  kubectl delete -f azure-k8s-compose-test.yml 
+  618  kubectl apply -f azure-k8s-compose-test.yml 
+  619  kubectl describe pods
+  620  kubectl describe pods
+  621  az subscrition list
+  622  az subscription list
+  623  az --help
+  624  az account list
+  625  kubectl describe pods
+  626  kubectl describe pods
+  627  kubectl delete -f azure-k8s-compose-test.yml 
+  628  kubectl apply -f azure-k8s-compose-test.yml 
+  629  kubectl describe pods
+  630  kubectl describe pods
+  631  kubectl describe pods
+  632  kubectl describe pods
+  633  kubectl describe pods
+  634  kubectl get pods
+  635  kubectl describe pods
+  636  history > History.tt
+  637  history 
+  638  az disk create --resource-group Jarvis --name Jarvis-Disk --location westus2 --size-gb 512 --query id --output tsv
+  639  kubectl delete -f azure-k8s-compose-test.yml 
+  640  kubectl apply -f azure-k8s-compose-test.yml 
+  641  kubectl get pods
+  642  kubectl describe pods
+  643  kubectl delete -f azure-k8s-compose-test.yml 
+  644  kubectl apply -f azure-k8s-compose-test.yml 
+  645  kubectl delete -f azure-k8s-compose-test.yml 
+  646  kubectl apply -f azure-k8s-compose-test.yml 
+  647  kubectl describe pods
+  648  kubectl describe pods
+  649  kubectl delete -f azure-k8s-compose-test.yml 
+  650  kubectl apply -f azure-k8s-compose-test.yml 
+  651  kubectl describe pods
+  652  kubectl describe pods
+  653  kubectl get pv
+  654  kubectl describe pods
+  655  history
+  656  kubectl get service devenv
+  657  kubectl exec devenv -- jupyter notebook list
+  658  kubectl get pods
+  659  kubectl exec devenv-67c9bdf789-xgwnm -- jupyter notebook list
+  660  git status
+  661  git add ../AKSTutorial
+  662  git rm --cached AKSTutorial/azure-voting-app-redis
+  663  git rm --cached ../AKSTutorial/azure-voting-app-redis
+  664  git rm --cached -f ../AKSTutorial/azure-voting-app-redis
+  665  git status
+  666  history > History.tt 
+  667  git add History.tt 
+  668  git status
+  669  cd ..
+  670  git status
+  671  git Add Service_OSX
+  672  git add Service_OSX
+  673  git status
+  674  git add DevEnv_Prod.ipynb README.md Spark_Prod.ipynb .ipynb_checkpoints/DevEnv_Prod-checkpoint.ipynb 
+  675  git status
+  676  ls AKSTutorial/
+  677  ls AKSTutorial/azure-voting-app-redis/
+  678  git branch
+  679  git checkout -b user/srmenon/WorkingKubernetesTest
+  680  git commit -m"Adding a basic test of running DevEnv in Azure Kubernetes"
+  681  git push -u origin HEAD
+  682  git checkout master
+  683  kubectl exec -it devenv-67c9bdf789-xgwnm -- /bin/bash
+  684  cd Service_OSX/
+  685  ls
+  686  kubectl delete -f azure-k8s-compose-test.yml 
+  687  kubectl apply -f azure-k8s-compose-test.yml 
+  688  kubectl delete -f azure-k8s-compose-test.yml 
+  689  kubectl apply -f azure-k8s-compose-test.yml 
+  690  kubectl describe pods
+  691  kubectl get pods
+  692  kubectl get pods
+  693  kubectl get pods
+  694  kubectl kubectl get logs broker-5ff9c65cd6-2slx8
+  695  kubectl get logs broker-5ff9c65cd6-2slx8
+  696  kubectl logs broker-5ff9c65cd6-2slx8
+  697  kubectl get pods
+  698  kubectl logs zookeeper-79dbf98ccf-b76bs
+  699  kubectl delete -f azure-k8s-compose-test.yml 
+  700  kubectl apply -f azure-k8s-compose-test.yml 
+  701  kubectl get pods
+  702  kubectl get pods
+  703  kubectl get pods
+  704  kubectl get pods
+  705  kubectl delete -f azure-k8s-compose-test.yml 
+  706  kubectl apply -f azure-k8s-compose-test.yml 
+  707  kubectl delete -f azure-k8s-compose-test.yml 
+  708  kubectl delete -f azure-k8s-compose-test.yml 
+  709  kubectl apply -f azure-k8s-compose-test.yml 
+  710  kubectl get pods
+  711  kubectl get pods
+  712  kubectl get pods
+  713  kubectl get pods
+  714  kubectl get pods
+  715  kubectl logs zookeeper-7df768d558-lcgvp
+  716  kubectl get pods
+  717  kubectl delete -f azure-k8s-compose-test.yml 
+  718  kubectl apply -f azure-k8s-compose-test.yml 
+  719  kubectl get pods
+  720  kubectl get pods
+  721  kubectl get pods
+  722  kubectl get pods
+  723  kubectl get pods
+  724  kubectl logs zookeeper-79dbf98ccf-rn5t2
+  725  kubectl delete -f azure-k8s-compose-test.yml 
+  726  kubectl apply -f azure-k8s-zookeeper.yml 
+  727  kubectl get pods
+  728  kubectl get pods
+  729  kubectl get pods
+  730  kubectl get pods
+  731  kubectl apply -f azure-k8s-compose-test.yml 
+  732  kubectl get pods
+  733  kubectl get pods
+  734  kubectl logs zkui-59d79cf77-bl9dl
+  735  kubectl get pods
+  736  kubectl logs broker-7997d9fd55-fv9sp
+  737  kubectl delete -f azure-k8s-compose-test.yml 
+  738  kubectl apply -f azure-k8s-compose-test.yml 
+  739  kubectl get pods
+  740  kubectl get pods
+  741  kubectl get pods
+  742  kubectl get pods
+  743  kubectl logs broker-cc6f6654d-lmqb8
+  744  kubectl get pods
+  745  kubectl delete -f azure-k8s-compose-test.yml 
+  746  kubectl apply -f azure-k8s-compose-test.yml 
+  747  kubectl get pods
+  748  history
+  749  kubectl exec -it devenv-67c9bdf789-gjgqk -- /bin/bash
+  750  kubectl delete -f azure-k8s-compose-test.yml 
+  751  kubectl apply -f azure-k8s-compose-test.yml 
+  752  kubectl get pods
+  753  kubectl exec -it devenv-c88f9dd5b-mnntr -- /bin/bash
+  754  kubectl get pods
+  755  kubectl logs devenv-c88f9dd5b-mnntr
+  756  kubectl delete -f azure-k8s-compose-test.yml 
+  757  kubectl apply -f azure-k8s-compose-test.yml 
+  758  kubectl get pods
+  759  kubectl get pods
+  760  kubectl get pods
+  761  kubectl logs devenv-6978b6b57b-qwrmt
+  762  kubectl delete -f azure-k8s-compose-test.yml 
+  763  kubectl apply -f azure-k8s-compose-test.yml 
+  764  kubectl get pods
+  765  kubectl get pods
+  766  kubectl logs 
+  767  kubectl logs devenv-df4db95c5-tc2x6
+  768  kubectl describe pod devenv-df4db95c5-tc2x6
+  769  kubectl delete -f azure-k8s-compose-test.yml; sleep 10; kubectl apply -f azure-k8s-compose-test.yml; sleep 15; kubectl get pods
+  770  kubectl get service devenv
+  771  kubectl get pods
+  772  kubectl get service devenv
+  773  kubectl get pods
+  774  kubectl get pods
+  775  kubectl exec -it devenv-6c557cf5bf-dbwxz /bin/bash
+  776  ls
+  777  kubectl get pods
+  778  kubectl logs broker-cc6f6654d-5ljl8
+  779* kubectl logs broker-
+  780  kubectl exec broker-cc6f6654d-5ljl8 date
+  781  kubectl get pods
+  782  kubectl exec -it devenv-6c557cf5bf-dbwxz /bin/bash
+  783  kubectl logs spark-59d79fc745-k6mtb
+  784  kubectl describe pod spark-59d79fc745-k6mtb
+  785  kubectl restart pod spark-59d79fc745-k6mtb
+  786  kubectl --help
+  787  kubectl get pods
+  788  kubectl get pods
+  789  kubectl get pods
+  790  kubectl decribe pod spark-59d79fc745-k6mtb
+  791  kubectl describe pod spark-59d79fc745-k6mtb
+  792  kubectl logs spark-59d79fc745-k6mtb
+  793  kubectl get pods
+  794  kubectl get service devenv
+  795  kubectl get service devenv
+  796  kubectl get pods
+  797  kubectl exec -it broker-cc6f6654d-5ljl8 /bin/bash
+  798  ls
+  799  kubectl get pods
+  800  kubectl describe pod spark-59d79fc745-k6mtb
+  801  kubectl logs spark-59d79fc745-k6mtb
+  802  kubectl describe pod spark-59d79fc745-k6mtb
+  803  kubectl get pods
+  804  kubectl exec -it zk-0 /bin/bash
+  805  kubectl exec -it broker-cc6f6654d-5ljl8 /bin/bash
+  806  kubectl exec -it zk-0 /bin/bash
+  807  history
+  808  kubectl delete -f azure-k8s-compose-test.yml 
+  809  kubectl apply -f azure-k8s-compose-test.yml 
+  810  kubectl get pods
+  811  kubectl get pods
+  812  kubectl get pods
+  813  kubectl exec -it broker-6bdb5bc58d-s28zn /bin/bash
+  814  ls
+  815  kubectl delete -f azure-k8s-compose-test.yml
+  816  kubectl delete -f azure-k8s-zookeeper.yml 
+  817  kubectl get pods
+  818  kubectl get pods
+  819  kubectl get pods
+  820  kubectl get pods
+  821  kubectl apply -f azure-k8s-zookeeper.yml 
+  822  kubectl apply -f azure-k8s-compose-test.yml 
+  823  kubectl get pods
+  824  kubectl get pods
+  825  kubectl logs azure-k8s-compose-test.yml
+  826  kubectl logs spark-5b667545b9-f7zdt
+  827  kubectl logs spark-5b667545b9-f7zdt
+  828  kubectl delete -f azure-k8s-compose-test.yml 
+  829  kubectl apply -f azure-k8s-compose-test.yml 
+  830  kubectl get pods
+  831  kubectl get pods
+  832  kubectl get pods
+  833  kubectl get service devenv spark
+  834  kubectl get service devenv spark
+  835  kubectl get pods
+  836  kubectl get service devenv spark
+  837  kubectl logs devenv-cd8b4d66d-csfq4
+  838  kubectl logs spark-bd6f7d797-r26cd
+  839  kubectl get pods
+  840  kubectl get pods
+  841  kubectl get pods
+  842  kubectl get pods
+  843  kubectl exec -it broker-6c968749b-4vnst /bin/bash
+  844  kubectl get pods
+  845  kubectl logs broker-6c968749b-4vnst
+  846  kubectl logs broker-6c968749b-4vnst
+  847  kubectl get pods
+  848  kubectl exec -it broker-6c968749b-4vnst /bin/bash
+  849  kubectl exec -it broker-6c968749b-4vnst /bin/bash
+  850  cd ..
+  851  cd ..
+  852  cd Jarvis/
+  853  git status
+  854  git branch
+  855  git checkout -b user/srmenon/WorkingVersionOnKubernetes
+  856  git status
+  857  history >> Service_OSX/History.tt 
