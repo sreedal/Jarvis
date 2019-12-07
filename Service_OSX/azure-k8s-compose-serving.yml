@@ -1,0 +1,134 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: azurefile
+provisioner: kubernetes.io/azure-file
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=1000
+  - gid=1000
+  - mfsymlinks
+  - nobrl
+  - cache=none
+parameters:
+  skuName: Standard_LRS
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: azurefile
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: azurefile
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: serving
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: serving
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: serving
+        image: tensorflow/serving
+        ports:
+        - containerPort: 8501
+          name: serving
+        volumeMounts:
+        - mountPath: /home/jovyan/work
+          name: test-volume
+        command: ["/bin/sh"]
+        args: ["-c", "if [ ! -d work/serving ]; then cd work; git clone https://github.com/tensorflow/serving; fi; \
+        sleep 40 && cp -r /home/jovyan/work/serving/tensorflow_serving/servables/tensorflow/testdata/saved_model_half_plus_two_cpu /models/half_plus_two; sleep infinity;" ]
+        env:
+        - name: 'MODEL_NAME'
+          value: 'half_plus_two'
+      volumes:
+      - name: test-volume
+        persistentVolumeClaim:
+          claimName: azurefile
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: serving
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8501
+  selector:
+    app: serving
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: redis-store
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: redis-store
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: redis-store
+        image: redis
+        ports:
+        - containerPort: 6379
+          name: redis-store
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-store
+spec:
+  type: ClusterIP
+  ports:
+  - port: 6379
+  selector:
+    app: redis-store
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: jarvis-node
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jarvis-node
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: jarvis-node
+        image: sreedal/jarvis-node
+        ports:
+        - containerPort: 8080
+          name: broker
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jarvis-node
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 82
+    targetPort: 8080
+  selector:
+    app: jarvis-node
