@@ -1,0 +1,24 @@
+extends layout
+block content
+        h1 T
+        table.table.table-striped.table-bordered
+            tr
+            td Time
+            td Title
+            td Summary
+            td Link
+            if (typeof tasks === "undefined")
+                tr
+                    td
+            else
+                each task in tasks
+                    tr
+                        - var date  = new Date(task.Timestamp*1000);
+                        - var day   = date.getDate();
+                        - var month = date.getMonth() + 1;
+                        - var year  = date.getFullYear();
+                        td #{month + "/" + day + "/" + year}
+                        //td #{task.timestamp}
+                        td #{task.Title}
+                        td #{task.Summary}
+                        td #{task.Link}
