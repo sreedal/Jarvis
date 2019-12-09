@@ -1,12 +1,16 @@
 extends layout
 block content
+        script.
+            function logClick(title, link){
+                alert("User ".concat("Sreedal").concat(" Clicked").concat(title).concat(" at ").concat(Date.now().toString()));
+                window.location = link;
+            }
         h1 T
         table.table.table-striped.table-bordered
             tr
             td Time
             td Title
             td Summary
-            td Link
             if (typeof tasks === "undefined")
                 tr
                     td
@@ -19,6 +23,7 @@ block content
                         - var year  = date.getFullYear();
                         td #{month + "/" + day + "/" + year}
                         //td #{task.timestamp}
-                        td #{task.Title}
-                        td #{task.Summary}
-                        td #{task.Link}
+                        td 
+                            a(href="javascript:void", onclick='logClick("#{task.Title}","#{task.Link}")') #{task.Title}
+                        td 
+                            a(href="#{task.Link}") !{task.Summary}

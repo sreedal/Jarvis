@@ -1,0 +1,62 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: redis-store
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: redis-store
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: redis-store
+        image: redis
+        ports:
+        - containerPort: 6379
+          name: redis-store
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-store
+spec:
+  type: ClusterIP
+  ports:
+  - port: 6379
+  selector:
+    app: redis-store
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: jarvis-node
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jarvis-node
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: jarvis-node
+        image: sreedal/jarvis-node:2
+        ports:
+        - containerPort: 8080
+          name: broker
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jarvis-node
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 82
+    targetPort: 8080
+  selector:
+    app: jarvis-node
