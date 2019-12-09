@@ -15,6 +15,30 @@ parameters:
   skuName: Standard_LRS
 ---
 apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: azurefile1
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: azurefile
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: azurefile
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: azurefile
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: v1
 kind: Service
 metadata:
   name: zk-hs
