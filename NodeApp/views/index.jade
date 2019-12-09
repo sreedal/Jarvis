@@ -21,7 +21,9 @@ block content
                         - var day   = date.getDate();
                         - var month = date.getMonth() + 1;
                         - var year  = date.getFullYear();
-                        td #{month + "/" + day + "/" + year}
+                        - var n     = date.getHours();
+                        - var m     = date.getMinutes();
+                        td #{month + "/" + day + "/" + year + "T"+n+":"+m}
                         //td #{task.timestamp}
                         td 
                             a(href="javascript:void", onclick='logClick("#{task.Title}","#{task.Link}")') #{task.Title}
