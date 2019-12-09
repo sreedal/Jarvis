@@ -26,6 +26,7 @@ block content
                         td #{month + "/" + day + "/" + year + "T"+n+":"+m}
                         //td #{task.timestamp}
                         td 
-                            a(href="javascript:void", onclick='logClick("#{task.Title}","#{task.Link}")') #{task.Title}
+                            //a(href="javascript:void", onclick='logClick("#{task.Title}","#{task.Link}")') #{task.Title}
+                            a(href="click?article=#{encodeURI(task.Title)}&link=#{encodeURI(task.Link)}") #{task.Title}
                         td 
                             a(href="#{task.Link}") !{task.Summary}
