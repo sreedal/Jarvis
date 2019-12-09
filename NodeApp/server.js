@@ -35,11 +35,6 @@ rclient.get("Sreedal", function(err, resp) {
     value = resp;
 });
 
-async function logClick(title, link){
-    alert("User "+"Sreedal"+" Clicked"+title+" at "+Date.now().toString());
-    window.location = link;
-}
-
 async function main(req, res) {
     let value = await rclient.getAsync("LatestNews");
     let JSONValue = JSON.parse(value);
@@ -48,7 +43,20 @@ async function main(req, res) {
     res.render('index',JSONValue);
 }
 
-app.get('/', (req,res) => {
+var KafkaRest = require('kafka-rest'); 
+var kafka = new KafkaRest({ 'url': 'http://broker:9092' });
+var topic = kafka.topic('click');
+
+app.get('/click', (req,res) => {
+    topic.partition(0).produce("{type: 'click', user: 'sreedal', article: ".concat(req.query.article).concat("}"));
+    //res.send(decodeURI(req.query.link));
+    res.writeHead(302, {
+        'Location': decodeURI(req.query.link)
+    });
+    res.end();
+});
+
+app.get('/info', (req,res) => {
     main(req,res);
 });
 

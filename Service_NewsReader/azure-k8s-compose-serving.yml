@@ -17,7 +17,7 @@ parameters:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: azurefile
+  name: azurefile3
 spec:
   accessModes:
     - ReadWriteMany
@@ -57,7 +57,7 @@ spec:
       volumes:
       - name: test-volume
         persistentVolumeClaim:
-          claimName: azurefile
+          claimName: azurefile3
 ---
 apiVersion: v1
 kind: Service
