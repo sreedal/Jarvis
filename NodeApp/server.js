@@ -35,6 +35,11 @@ rclient.get("Sreedal", function(err, resp) {
     value = resp;
 });
 
+async function logClick(title, link){
+    alert("User "+"Sreedal"+" Clicked"+title+" at "+Date.now().toString());
+    window.location = link;
+}
+
 async function main(req, res) {
     let value = await rclient.getAsync("LatestNews");
     let JSONValue = JSON.parse(value);
