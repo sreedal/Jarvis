@@ -1,0 +1,32 @@
+extends layout
+block content
+        script.
+            function logClick(title, link){
+                alert("User ".concat("Sreedal").concat(" Clicked").concat(title).concat(" at ").concat(Date.now().toString()));
+                window.location = link;
+            }
+        h1 T
+        table.table.table-striped.table-bordered
+            tr
+            td Time
+            td Title
+            td Summary
+            if (typeof tasks === "undefined")
+                tr
+                    td
+            else
+                each task in tasks
+                    tr
+                        - var date  = new Date(task.Timestamp*1000);
+                        - var day   = date.getDate();
+                        - var month = date.getMonth() + 1;
+                        - var year  = date.getFullYear();
+                        - var n     = date.getHours();
+                        - var m     = date.getMinutes();
+                        td #{month + "/" + day + "/" + year + "T"+n+":"+m}
+                        //td #{task.timestamp}
+                        td 
+                            //a(href="javascript:void", onclick='logClick("#{task.Title}","#{task.Link}")') #{task.Title}
+                            a(href="click?article=#{encodeURI(task.Title)}&link=#{encodeURI(task.Link)}") #{task.Title}
+                        td 
+                            a(href="#{task.Link}") !{task.Summary}
