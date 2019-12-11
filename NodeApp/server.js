@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-var uuid = guid();
+var guid = require('uuid/v4');
 
 let rclient = Promise.promisifyAll(redis.createClient(6379,'redis-store'));
 rclient.on('connect', function() {
@@ -54,6 +54,7 @@ const kafka = new Kafka({
 const producer = kafka.producer();
 
 app.get('/click', (req,res) => {
+    var uuid = guid();
     if(!req.cookies.hasOwnProperty('JUID')){
         res.cookie('JUID', uuid, { maxAge: 900000, httpOnly: true });
     } else {
@@ -78,6 +79,7 @@ app.get('/click', (req,res) => {
 });
 
 app.get('/info', (req,res) => {
+    var uuid = guid();
     if(!req.cookies.hasOwnProperty('JUID')){
         res.cookie('JUID', uuid, { maxAge: 900000, httpOnly: true });
     } else {
