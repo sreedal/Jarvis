@@ -55,7 +55,7 @@ const producer = kafka.producer();
 
 app.get('/click', (req,res) => {
     var uuid = guid();
-    if(!req.cookies.hasOwnProperty('JUID')){
+    if(undefined === req.cookies.JUID){
         res.cookie('JUID', uuid, { maxAge: 900000, httpOnly: true });
     } else {
         uuid = req.cookies['JUID'];
@@ -80,7 +80,7 @@ app.get('/click', (req,res) => {
 
 app.get('/info', (req,res) => {
     var uuid = guid();
-    if(!req.cookies.hasOwnProperty('JUID')){
+    if(undefined === req.cookies.JUID){
         res.cookie('JUID', uuid, { maxAge: 900000, httpOnly: true });
     } else {
         uuid = req.cookies['JUID'];
