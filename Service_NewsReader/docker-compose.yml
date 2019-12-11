@@ -82,7 +82,7 @@ services:
     deploy:
       replicas: 1
   jarvis-node:
-    image: sreedal/jarvis-node:13
+    image: sreedal/jarvis-node:14
     networks: 
       - kafka-net
     ports:
