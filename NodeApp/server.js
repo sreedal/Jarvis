@@ -21,6 +21,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+var uuid = guid();
+
 let rclient = Promise.promisifyAll(redis.createClient(6379,'redis-store'));
 rclient.on('connect', function() {
     console.log('Connected to Redis Server');
@@ -43,20 +45,44 @@ async function main(req, res) {
     res.render('index',JSONValue);
 }
 
-var KafkaRest = require('kafka-rest'); 
-var kafka = new KafkaRest({ 'url': 'http://broker:9092' });
-var topic = kafka.topic('click');
+const { Kafka } = require('kafkajs');
+
+const kafka = new Kafka({
+  clientId: 'jarvis-node',
+  brokers: ['broker:9092']
+});
+const producer = kafka.producer();
 
 app.get('/click', (req,res) => {
-    topic.partition(0).produce("{type: 'click', user: 'sreedal', article: ".concat(req.query.article).concat("}"));
+    if(!req.cookies.hasOwnProperty('JUID')){
+        res.cookie('JUID', uuid, { maxAge: 900000, httpOnly: true });
+    } else {
+        uuid = req.cookies['JUID'];
+    }
+
+    var message = {Type: 'Click', User: uuid, Timestamp: Date.now(),Title: req.query.article, Link: req.query.link };
     //res.send(decodeURI(req.query.link));
     res.writeHead(302, {
         'Location': decodeURI(req.query.link)
     });
     res.end();
+
+    producer.connect();
+    producer.send({
+        topic: 'click',
+        messages: [
+            { value: JSON.stringify(message) },
+        ],
+    });
+    producer.disconnect();
 });
 
 app.get('/info', (req,res) => {
+    if(!req.cookies.hasOwnProperty('JUID')){
+        res.cookie('JUID', uuid, { maxAge: 900000, httpOnly: true });
+    } else {
+        uuid = req.cookies['JUID'];
+    }
     main(req,res);
 });
 
