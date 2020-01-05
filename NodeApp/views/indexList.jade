@@ -1,0 +1,20 @@
+.list-group
+    each task in tasks
+        a.list-group-item.active( href="click?article=#{encodeURI(task.Title)}&link=#{encodeURI(task.Link)}") 
+            h4.list-group-item-heading #{task.Title}
+            p.list-group-item-text !{task.Summary}
+div(id= "expansion#{next}") See More
+    script.
+        $(window).scroll(function(){
+            if(elementScrolled('#expansion#{next}')) {
+                $.ajax({url: "info?set=#{next}", success: function(result){
+                    $("#expansion#{next}").html(result);
+                    $("#expansion#{next}").attr("id","expansion")
+                }});
+            }
+        });
+        //$("#expansion#{next}").one('click', function(){
+        //    $.ajax({url: "info?set=#{next}", success: function(result){
+        //        $("#expansion#{next}").html(result);
+        //    }});
+        //});

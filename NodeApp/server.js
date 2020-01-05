@@ -38,11 +38,24 @@ rclient.get("Sreedal", function(err, resp) {
 });
 
 async function main(req, res) {
-    let value = await rclient.getAsync("LatestNews");
+    let key = "LatestNews";
+    if(req.query.set)
+    {
+        key = req.query.set;
+    }
+
+    let value = await rclient.getAsync(key);
     let JSONValue = JSON.parse(value);
     //let JSONValue = JSON.parse("{\"tasks\": [{\"Timestamp\": 1575752793.033858, \"Title\": \"Sreedal\", \"Summary\": \"Sreedal Summary\", \"Link\":\"http://github.io/sreedal\"},{\"Timestamp\": 1575752793.033858, \"Title\": \"Radhika\", \"Summary\": \"Radhika Summary\", \"Link\":\"http://github.io/radhika\"}]}");
     //res.send('Hello world: News: '+JSONValue+'\n');
-    res.render('index',JSONValue);
+    if(req.query.set)
+    {
+        res.render('indexList',JSONValue);
+    }
+    else
+    {
+        res.render('index',JSONValue);
+    }
 }
 
 const { Kafka } = require('kafkajs');

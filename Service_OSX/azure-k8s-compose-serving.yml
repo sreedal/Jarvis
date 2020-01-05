@@ -116,7 +116,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: jarvis-node
-        image: sreedal/jarvis-node:11
+        image: sreedal/jarvis-node:20
         ports:
         - containerPort: 8080
           name: broker
