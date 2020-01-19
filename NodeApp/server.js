@@ -90,6 +90,35 @@ app.get('/click', (req,res) => {
     });
     producer.disconnect();
 });
+var lastView = Date.now();
+var lastMessage = "";
+
+app.get('/view', (req,res) => {
+    var uuid = guid();
+    if(undefined === req.cookies.JUID){
+        res.cookie('JUID', uuid, { maxAge: 900000, httpOnly: true });
+    } else {
+        uuid = req.cookies['JUID'];
+    }
+
+    var currentView = Date.now();
+
+    var message = {Type: 'View', User: uuid, Timestamp: Date.now(),Title: req.query.article, Link: req.query.link };
+    res.end();
+    //if((currentView-lastView)>=1000){ //Consider Viewed only if 1s of screen time on article
+        producer.connect();
+        lastMessage['Delay']=(currentView-lastView);
+        producer.send({
+            topic: 'click',
+            messages: [
+                { value: JSON.stringify(lastMessage) },
+            ],
+        });
+        producer.disconnect();
+    //}
+    lastView = currentView;
+    lastMessage = message;
+});
 
 app.get('/info', (req,res) => {
     var uuid = guid();

@@ -50,6 +50,9 @@ html( lang="en" )
             .list-group-item-heading{
                 font-size: 28px;
             }
+            .hidden{
+                visibility: hidden;
+            }
         title Jarvis Article Reader
         meta( charset='utf-8' )
         meta( http-equiv='X-UA-Compatible', content='IE=edge' )
@@ -68,9 +71,10 @@ html( lang="en" )
 
         .list-group
             each task in tasks
-                a.list-group-item.active( href="click?article=#{encodeURI(task.Title)}&link=#{encodeURI(task.Link)}") 
+                a#task.list-group-item.active( href="click?article=#{encodeURI(task.Title)}&link=#{encodeURI(task.Link)}") 
                     h4.list-group-item-heading #{task.Title}
                     p.list-group-item-text !{task.Summary}
+        div#background.hidden
         div(id= "expansion#{next}") See More
             script.
                 function elementScrolled(elem)
@@ -87,6 +91,20 @@ html( lang="en" )
                         $.ajax({url: "info?set=#{next}", success: function(result){
                             $("#expansion#{next}").html(result);
                             $("#expansion#{next}").attr("id","expansion")
+                        }});
+                    }
+                    if(elementScrolled('#task')){
+                        $(this).each(function() {
+                            $.each(this.attributes, function() {
+                                // this.attributes is not a plain object, but an array
+                                // of attribute nodes, which contain both the name and value
+                                if(this.specified) {
+                                    console.log(this.name, this.value);
+                                }
+                            });
+                        });
+                        $.ajax({url: $(this).attr('href').replace("click","view"), success: function(result){
+                            $("#background").html(result);
                         }});
                     }
                 });
