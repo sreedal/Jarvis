@@ -1,0 +1,194 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: devenv
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: devenv
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: devenv
+        image: jupyter/tensorflow-notebook
+        ports:
+        - containerPort: 8888
+          name: devenv
+        volumeMounts:
+        - mountPath: /home/jovyan/work
+          name: test-volume
+        command: ["/bin/sh"]
+        args: ["-c", "if [ ! -d work/Jarvis ]; then cd work; git clone https://github.com/sreedal/Jarvis; else cd work/Jarvis; git reset --hard; git checkout master; git pull; cd ..; fi; \
+        jupyter notebook &;\
+        jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --clear-output /home/jovyan/work/Jarvis/Prod/ServicesAKS/DevEnv/Prod.ipynb;"]
+      volumes:
+      - name: test-volume
+        persistentVolumeClaim:
+          claimName: azurefile1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: devenv
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8888
+  selector:
+    app: devenv
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: spark
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: spark
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: spark
+        image: jupyter/pyspark-notebook
+        ports:
+        - containerPort: 8888
+          name: spark
+        volumeMounts:
+        - mountPath: /home/jovyan/work
+          name: test-volume
+        command: ["/bin/sh"]
+        args: ["-c", "if [ ! -d work/Jarvis ]; then cd work; git clone https://github.com/sreedal/Jarvis; else cd work/Jarvis; git reset --hard; git checkout master; git pull; cd ..; fi; \
+        wget https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-8-assembly_2.11/2.4.4/spark-streaming-kafka-0-8-assembly_2.11-2.4.4.jar; \
+        jupyter notebook &;\
+        jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --clear-output /home/jovyan/work/Jarvis/Prod/ServicesAKS/Spark/Prod.ipynb;"]
+      volumes:
+      - name: test-volume
+        persistentVolumeClaim:
+          claimName: azurefile
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spark
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 81
+    targetPort: 8888
+  selector:
+    app: spark
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: broker
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: broker
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: broker0
+        image: sreedal/kafka:latest
+        ports:
+        - containerPort: 9092
+          name: broker
+        env:
+        - name: 'ZK_SERVERS'
+          value: 'zk-cs'
+        - name: 'POD_IP'
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: status.podIP
+        - name: 'KAFKA_BROKER_ID'
+          value: '0'
+        - name: 'ADVERTISED_LISTENERS'
+          value: 'broker:9092'
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: broker
+spec:
+  type: ClusterIP
+  ports:
+  - port: 9092
+  selector:
+    app: broker
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: manager
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: manager
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: manager
+        image: qnib/plain-kafka-manager:latest
+        ports:
+        - containerPort: 9000
+          name: manager
+        env:
+        - name: 'ZOOKEEPER_HOSTS'
+          value: 'zk-cs:2181'
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: manager
+spec:
+  type: ClusterIP 
+  ports:
+  - port: 9000
+  selector:
+    app: manager
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: redis-store
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: redis-store
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: redis-store
+        image: redis
+        ports:
+        - containerPort: 6379
+          name: redis-store
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-store
+spec:
+  type: ClusterIP
+  ports:
+  - port: 6379
+  selector:
+    app: redis-store

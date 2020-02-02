@@ -1,0 +1,97 @@
+//- Navbar mixins
+mixin nav(name, id, style)
+    - var style = (typeof style === 'undefined') ? "default" : style
+    nav( role="navigation", class=["navbar", "navbar-" + style] )
+        .navbar-header
+            button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#" + id, aria-expanded="false", aria-controls="navbar")
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href="#")= name
+ 
+        .collapse.navbar-collapse( id=id )
+            ul.nav.navbar-nav
+                block
+ 
+mixin nav_item(href, active)
+    li(class=active): a( href=href )
+        block
+ 
+mixin nav_item_dropdown(href, active)
+    li(class=["dropdown", active])
+        a.dropdown-toggle( href=href, data-toggle="dropdown", role="button", aria-expanded="false" )= attributes.label
+            span.caret
+        ul.dropdown-menu( role="menu" )
+            block
+ 
+mixin nav_divider
+    li.divider
+ 
+mixin nav_header
+    li.dropdown-header
+        block
+
+//- Panel mixin
+mixin panel(heading, style)
+    - var style = (typeof style === 'undefined') ? "default" : style
+    div( class=["panel", "panel-" + style] )
+        .panel-heading= heading
+        .panel-body
+            block
+
+doctype
+html( lang="en" )
+    head
+        style(type='text/css').
+            .feedflare {
+                height: 0px;
+            }
+            .list-group-item-heading{
+                font-size: 28px;
+            }
+        title Jarvis Article Reader
+        meta( charset='utf-8' )
+        meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+        meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+        meta( name='description', content='Jarvis Article Reader Feed' )
+        //- Bootswatch Theme
+        link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/flatly/bootstrap.min.css", rel="stylesheet")
+
+    body(style="padding-bottom:10rem;font-size:24px")
+        .container
+ 
+        script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
+        script( src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' )
+
+        +nav("Jarvis Personalized Article Reader", "dropdown_menu")
+
+        .list-group
+            each task in tasks
+                a.list-group-item.active( href="click?article=#{encodeURI(task.Title)}&link=#{encodeURI(task.Link)}") 
+                    h4.list-group-item-heading #{task.Title}
+                    p.list-group-item-text !{task.Summary}
+        div(id= "expansion#{next}") See More
+            script.
+                function elementScrolled(elem)
+                {
+                    if($(elem).length <= 0)
+                        return false;
+                    var docViewTop = $(window).scrollTop();
+                    var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(elem).offset().top;
+                    return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+                }
+                $(window).scroll(function(){
+                    if(elementScrolled('#expansion#{next}')) {
+                        $.ajax({url: "info?set=#{next}", success: function(result){
+                            $("#expansion#{next}").html(result);
+                            $("#expansion#{next}").attr("id","expansion")
+                        }});
+                    }
+                });
+                //$("#expansion#{next}").one('click', function(){
+                //    $.ajax({url: "info?set=#{next}", success: function(result){
+                //        $("#expansion#{next}").html(result);
+                //    }});
+                //});
