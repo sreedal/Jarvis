@@ -89,6 +89,22 @@ html( lang="en" )
                             $("#expansion#{next}").attr("id","expansion")
                         }});
                     }
+
+                    var elements = document.querySelectorAll(".list-group-item");
+                    for(var i = 0; i < elements.length; i++) {
+                        if(elementScrolled(elements[i])) {
+                            if($(elements[i]).attr("isviewed")==undefined && $(elements[i]).attr("lastviewed")==undefined){
+                                $(elements[i]).attr("lastviewed",Date.now());
+                            }
+                            else if($(elements[i]).attr("isviewed")==undefined && (Date.now()-$(elements[i]).attr("lastviewed"))>2000) {
+                                console.log("Element " + i + " is viewable");
+                                $(elements[i]).attr("isviewed","true");
+                                var title = encodeURI($(elements[i]).find("h4").html());
+                                var link = encodeURI($(elements[i]).attr("href").split("=")[2]);
+                                $.ajax({url: "view?article=#{title}&link=#{link}"})
+                            }
+                        }
+                    }
                 });
                 //$("#expansion#{next}").one('click', function(){
                 //    $.ajax({url: "info?set=#{next}", success: function(result){
