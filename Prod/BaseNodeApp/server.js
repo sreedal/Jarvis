@@ -101,6 +101,31 @@ app.get('/info', (req,res) => {
     main(req,res);
 });
 
+app.get('/view', (req,res) => {
+    var uuid = guid();
+    if(undefined === req.cookies.JUID){
+        res.cookie('JUID', uuid, { maxAge: 900000, httpOnly: true });
+    } else {
+        uuid = req.cookies['JUID'];
+    }
+
+    var message = {Type: 'View', User: uuid, Timestamp: Date.now(),Title: req.query.article, Link: req.query.link };
+    //res.send(decodeURI(req.query.link));
+    res.writeHead(302, {
+        'Location': decodeURI(req.query.link)
+    });
+    res.end();
+
+    producer.connect();
+    producer.send({
+        topic: 'click',
+        messages: [
+            { value: JSON.stringify(message) },
+        ],
+    });
+    producer.disconnect();
+});
+
 app.set('view engine', 'jade')
 
 app.listen(PORT, HOST);

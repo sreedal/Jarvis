@@ -20,5 +20,6 @@ if [ "$#" -gt "0" ]
 then
     echo "Archiving in Remote Also"
     pod=$(kubectl get pods | grep spark | cut -d' ' -f1)
+    kubectl exec $pod "/bin/bash chmod a+x /home/joyvan/work/Jarvis/Prod/Commands/archive_data_folders.sh"
     kubectl exec $pod "/bin/bash /home/joyvan/work/Jarvis/Prod/Commands/archive_data_folders.sh"
 fi

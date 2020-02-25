@@ -47,7 +47,7 @@ services:
       - type: bind
         source: '/Users/sreedal/Workspace/'
         target: '/home/jovyan/work'
-    command: bash -c "sleep 40 && jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --clear-output /home/jovyan/work/Jarvis/Prod/ServicesDocker/DevEnv/Prod.ipynb"
+    command: bash -c "sleep 40 && jupyter notebook & jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --clear-output /home/jovyan/work/Jarvis/Prod/ServicesDocker/DevEnv/Prod.ipynb"
   spark:
     image: jupyter/pyspark-notebook
     networks: 
@@ -60,7 +60,7 @@ services:
       - type: bind
         source: '/Users/sreedal/Workspace'
         target: '/home/jovyan/work'
-    command: bash -c "sleep 40 && jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --clear-output /home/jovyan/work/Jarvis/Prod/ServicesDocker/Spark/Prod.ipynb"
+    command: bash -c "sleep 40 && jupyter notebook & jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --clear-output /home/jovyan/work/Jarvis/Prod/ServicesDocker/Spark/Prod.ipynb"
   serving:
     image: tensorflow/serving
     networks: 
