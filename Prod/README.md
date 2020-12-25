@@ -18,6 +18,6 @@ New User Onboarding
 4. install azure cli from https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest 
 5. az login # Login to the right azure subscription
 6. az aks list 
-7. install kubectl
+7. install kubectl (https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster) [ az aks install-cli ; az aks get-credentials --resource-group myResourceGroup --name myAKSCluster ; kubectl get nodes ]
 8. ./Prod/Commands/start_all_services.sh
 9.  Browse the link in the output tagged as "Prod Jarvis Node" / "Local Jarvis Node"
