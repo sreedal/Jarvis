@@ -21,7 +21,7 @@ spec:
         - mountPath: /home/jovyan/work
           name: test-volume
         command: ["/bin/sh"]
-        args: ["-c", "if [ ! -d work/Jarvis ]; then cd work; git clone https://github.com/sreedal/Jarvis; else cd work/Jarvis; git reset --hard; git checkout master; git pull; cd ..; fi; \
+        args: ["-c", "if [ ! -d work/Jarvis ]; then cd work; git clone https://github.com/sreedal/Jarvis; cd Jarvis; git checkout -- Prod; else cd work/Jarvis; git reset --hard; git checkout master; git pull; cd ..; fi; \
         jupyter notebook && sleep infinity"]
 #jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --clear-output /home/jovyan/work/Jarvis/Prod/ServicesAKS/DevEnv/Prod.ipynb;"]
       volumes:
@@ -64,7 +64,7 @@ spec:
         - mountPath: /home/jovyan/work
           name: test-volume
         command: ["/bin/sh"]
-        args: ["-c", "if [ ! -d work/Jarvis ]; then cd work; git clone https://github.com/sreedal/Jarvis; else cd work/Jarvis; git reset --hard; git checkout master; git pull; cd ..; fi; \
+        args: ["-c", "if [ ! -d work/Jarvis ]; then cd work; git clone https://github.com/sreedal/Jarvis; cd Jarvis; git checkout -- Prod; else cd work/Jarvis; git reset --hard; git checkout master; git pull; cd ..; fi; \
         wget https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-8-assembly_2.11/2.4.4/spark-streaming-kafka-0-8-assembly_2.11-2.4.4.jar; \
         jupyter notebook && sleep infinity"]
 #jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --clear-output /home/jovyan/work/Jarvis/Prod/ServicesAKS/Spark/Prod.ipynb;"]
